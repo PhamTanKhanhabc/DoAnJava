@@ -4,6 +4,8 @@
  */
 package DTO.ThuocTinhSanPham;
 
+import java.util.Objects;
+
 /**
  *
  * @author user
@@ -36,7 +38,17 @@ public class GioiTinhDTO {
     public void setTenGioiTinh(String tenGioiTinh) {
         this.tenGioiTinh = tenGioiTinh;
     }
-
+    @Override
+    public int hashCode() {
+        return Objects.hash(maGioiTinh);
+    }
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (obj == null || getClass() != obj.getClass()) return false;
+        GioiTinhDTO that = (GioiTinhDTO) obj;
+        return maGioiTinh == that.maGioiTinh;
+    }
     @Override
     public String toString() {
         return "GioiTinhDTO{maGioiTinh=" + maGioiTinh + ", tenGioiTinh='" + tenGioiTinh + "'}";

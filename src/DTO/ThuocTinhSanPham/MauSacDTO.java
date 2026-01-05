@@ -1,5 +1,7 @@
 package DTO.ThuocTinhSanPham;
 
+import java.util.Objects;
+
 public class MauSacDTO {
 
     private int maMau;
@@ -27,6 +29,17 @@ public class MauSacDTO {
 
     public void setTenMau(String tenMau) {
         this.tenMau = tenMau;
+    }
+    @Override
+    public int hashCode() {
+        return Objects.hash(maMau);
+    }
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (obj == null || getClass() != obj.getClass()) return false;
+        MauSacDTO that = (MauSacDTO) obj;
+        return maMau == that.maMau;
     }
     @Override
     public String toString() {

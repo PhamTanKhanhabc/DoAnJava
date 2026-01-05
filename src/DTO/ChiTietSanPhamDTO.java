@@ -4,6 +4,8 @@
  */
 package DTO;
 
+import java.util.Objects;
+
 /**
  *
  * @author user
@@ -61,6 +63,17 @@ public class ChiTietSanPhamDTO {
 
     public void setTinhTrang(int tinhTrang) {
         this.tinhTrang = tinhTrang;
+    }
+    @Override
+    public int hashCode() {
+        return Objects.hash(maLo);
+    }
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (obj == null || getClass() != obj.getClass()) return false;
+        ChiTietSanPhamDTO that = (ChiTietSanPhamDTO) obj;
+        return maLo == that.maLo;
     }
     @Override 
     public String toString() { 

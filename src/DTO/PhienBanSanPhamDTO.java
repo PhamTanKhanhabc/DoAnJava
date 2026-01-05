@@ -4,6 +4,8 @@
  */
 package DTO;
 
+import java.util.Objects;
+
 /**
  *
  * @author user
@@ -121,6 +123,18 @@ public class PhienBanSanPhamDTO {
 
     public void setSoLuongTon(int soLuongTon) {
         this.soLuongTon = soLuongTon;
+    }
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (obj == null || getClass() != obj.getClass()) return false;
+        PhienBanSanPhamDTO that = (PhienBanSanPhamDTO) obj;
+        return maPhienBanSp == that.maPhienBanSp;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(maPhienBanSp);
     }
     @Override 
     public String toString() { 

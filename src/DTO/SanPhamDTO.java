@@ -4,6 +4,8 @@
  */
 package DTO;
 
+import java.util.Objects;
+
 /**
  *
  * @author Phạm Tấn Khánh
@@ -132,6 +134,19 @@ public class SanPhamDTO {
     public void setSoLuongTon(int soLuongTon) {
         this.soLuongTon = soLuongTon;
     }
+    @Override
+    public int hashCode() {
+        return Objects.hash(maSp);
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (obj == null || getClass() != obj.getClass()) return false;
+        SanPhamDTO that = (SanPhamDTO) obj;
+        return maSp == that.maSp;
+    }
+
     @Override 
     public String toString() { 
         return "SanPhamDTO{" + "maSp=" + maSp + ", tenSp='" + tenSp + '\'' + ", hinhAnh='" + hinhAnh + '\'' + ", xuatXu=" + xuatXu + ", chatLieu=" + chatLieu + ", gioiTinh=" + gioiTinh + ", mauSac=" + mauSac + ", size=" + size + ", thoigianbaohanh=" + thoigianbaohanh + ", thuongHieu=" + thuongHieu + ", khuVucKho=" + khuVucKho + ", soLuongTon=" + soLuongTon + '}'; 

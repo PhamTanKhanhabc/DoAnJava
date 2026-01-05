@@ -1,5 +1,7 @@
 package DTO.ThuocTinhSanPham;
 
+import java.util.Objects;
+
 public class XuatXuDTO {
 
     private int maXuatXu;
@@ -27,6 +29,17 @@ public class XuatXuDTO {
 
     public void setTenXuatXu(String tenXuatXu) {
         this.tenXuatXu = tenXuatXu;
+    }
+    @Override
+    public int hashCode() {
+        return Objects.hash(maXuatXu);
+    }
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (obj == null || getClass() != obj.getClass()) return false;
+        XuatXuDTO that = (XuatXuDTO) obj;
+        return maXuatXu == that.maXuatXu;
     }
     @Override 
     public String toString() { 
