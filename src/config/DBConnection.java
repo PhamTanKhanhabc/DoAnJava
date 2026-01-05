@@ -20,7 +20,7 @@ public class DBConnection {
             // Chuỗi kết nối
             String url =
                 "jdbc:sqlserver://localhost:1433;" +
-                "databaseName=QLSinhVien;" +
+                "databaseName=QLKHQuanAoThoiTrang;" +
                 "encrypt=false";
             String user = "sa";
             String pass = "123";
