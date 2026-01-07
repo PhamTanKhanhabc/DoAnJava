@@ -17,21 +17,19 @@ public class PhienBanSanPhamDTO {
     private int gioiTinh; //viết int để kết với maGioiTinh trong GioiTinhDTO.java
     private int mauSac; //viết int để kết với maMau trong MauSacDTO.java
     private int size; //viết int để kết với maSize trong SizeQuanAoDTO.java
-    private int thuongHieu;
     private int xuatXu;
     private int giaNhap;
     private int giaXuat;
     private int soLuongTon;
     public PhienBanSanPhamDTO() {
     }
-    public PhienBanSanPhamDTO(int maPhienBanSp, int maSp, int chatLieu, int gioiTinh, int mauSac, int size, int thuongHieu, int xuatXu, int giaNhap, int giaXuat, int soLuongTon) {
+    public PhienBanSanPhamDTO(int maPhienBanSp, int maSp, int chatLieu, int gioiTinh, int mauSac, int size, int xuatXu, int giaNhap, int giaXuat, int soLuongTon) {
         this.maPhienBanSp = maPhienBanSp;
         this.maSp = maSp;
         this.chatLieu = chatLieu;
         this.gioiTinh = gioiTinh;
         this.mauSac = mauSac;
         this.size = size;
-        this.thuongHieu = thuongHieu;
         this.xuatXu = xuatXu;
         this.giaNhap = giaNhap;
         this.giaXuat = giaXuat;
@@ -85,14 +83,6 @@ public class PhienBanSanPhamDTO {
         this.size = size;
     }
 
-    public int getThuongHieu() {
-        return thuongHieu;
-    }
-
-    public void setThuongHieu(int thuongHieu) {
-        this.thuongHieu = thuongHieu;
-    }
-
     public int getXuatXu() {
         return xuatXu;
     }
@@ -138,6 +128,6 @@ public class PhienBanSanPhamDTO {
     }
     @Override 
     public String toString() { 
-        return "PhienBanSanPhamDTO{" + "maPhienBanSp=" + maPhienBanSp + ", maSp=" + maSp + ", chatLieu=" + chatLieu + ", gioiTinh=" + gioiTinh + ", mauSac=" + mauSac + ", size=" + size + ", thuongHieu=" + thuongHieu + ", xuatXu=" + xuatXu + ", giaNhap=" + giaNhap + ", giaXuat=" + giaXuat + ", soLuongTon=" + soLuongTon + '}'; 
+        return "PhienBanSanPhamDTO{" + "maPhienBanSp=" + maPhienBanSp + ", maSp=" + maSp + ", chatLieu=" + chatLieu + ", gioiTinh=" + gioiTinh + ", mauSac=" + mauSac + ", size=" + size + ", xuatXu=" + xuatXu + ", giaNhap=" + giaNhap + ", giaXuat=" + giaXuat + ", soLuongTon=" + soLuongTon + '}'; 
     }
 }
