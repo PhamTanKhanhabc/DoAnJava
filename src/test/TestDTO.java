@@ -17,7 +17,6 @@ public class TestDTO {
         sp.setMaSp(1);
         sp.setTenSp("Áo thun");
         sp.setHinhAnh("ao.png");
-        sp.setXuatXu(100);
         System.out.println(sp);
         
         ThuongHieuDTO th = new ThuongHieuDTO(5, "Nike");
